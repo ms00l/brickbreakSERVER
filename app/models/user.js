@@ -1,25 +1,41 @@
 const mongoose = require('mongoose')
+const reqNum = {
+  type: Number,
+  required: false
+}
 
-const userSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: true,
-    unique: true
+const scoresSchema = new mongoose.Schema(
+  {
+    value: reqNum
   },
-  hashedPassword: {
-    type: String,
-    required: true
+  {
+    timestamps: true
+  }
+)
+const userSchema = new mongoose.Schema(
+  {
+    email: {
+      type: String,
+      required: true,
+      unique: true
+    },
+    score: [scoresSchema],
+    hashedPassword: {
+      type: String,
+      required: true
+    },
+    token: String
   },
-  token: String
-}, {
-  timestamps: true,
-  toObject: {
-    // remove `hashedPassword` field when we call `.toObject`
-    transform: (_doc, user) => {
-      delete user.hashedPassword
-      return user
+  {
+    timestamps: true,
+    toObject: {
+      // remove `hashedPassword` field when we call `.toObject`
+      transform: (_doc, user) => {
+        delete user.hashedPassword
+        return user
+      }
     }
   }
-})
+)
 
 module.exports = mongoose.model('User', userSchema)

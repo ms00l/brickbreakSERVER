@@ -1,11 +1,11 @@
 #!/bin/bash
 
 API="http://localhost:4741"
-URL_PATH="/profiles"
-TOKEN="fcc4082ca4c5120f8fd0d1eb92db24a1"
-USERNAME="bigg dogg mcgraw"
-FIRST="moe"
-LAST="chieftain apollo rockstar"
+URL_PATH="/create-profile"
+# TOKEN="40aaa3ae4a1b0472e4afcd2fd6b2ec45"
+# USERNAME="bigg dogg mcgraw"
+# FIRST="moe"
+# LAST="chieftain apollo rockstar"
 
 curl "${API}${URL_PATH}" \
   --include \

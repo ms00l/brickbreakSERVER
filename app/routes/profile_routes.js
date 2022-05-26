@@ -29,7 +29,7 @@ const router = express.Router()
 
 // INDEX
 // GET /profiles
-router.get('/profiles', requireToken, (req, res, next) => {
+router.get('/profile', requireToken, (req, res, next) => {
   Profile.find()
     .then(profiles => {
       // `profiles` will be an array of Mongoose documents
@@ -57,7 +57,7 @@ router.get('/profiles/:id', requireToken, (req, res, next) => {
 
 // CREATE
 // POST /profiles
-router.post('/profiles', requireToken, (req, res, next) => {
+router.post('/create-profile', requireToken, (req, res, next) => {
   // set owner of new profile to be current user
   req.body.profile.owner = req.user.id
 
