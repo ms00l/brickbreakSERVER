@@ -1,6 +1,19 @@
 # Brickbreaker
 ## Introduction
 A simple game of brickbreaker that we all know and love.
+
+## Set Up Instructions
+- Fork and clone this repository
+- Change into directory
+- Checkout to a new branch
+- Run ``npm install`` in the command line
+- Run ``npm run server`` in the command line
+
+## Project Planning 
+- Layed out plan for MVP of CRUD actions
+- Created a set schedule for having MVP done by due date
+- Planned how I would work on each section at a time starting with backend then frontend
+- Made sure canvas game would work in React
 ## User Stories
 1. Sign Up: If you're a first time user, sign up with your email and password.
 2. Sign In: If you're already registered, congrats! Click 'Sign In.' Change your password if needed.
@@ -14,21 +27,7 @@ A simple game of brickbreaker that we all know and love.
 - User will be able to play the game.
 - User will be able to view their high scores and others high scores.
 
-## Entity Relationship Diagram
-
-
-<!-- ## API Routes -->
-
-<!-- ### _User Authorization Routes_
-
-| HTTP Method   | URL Path        | Result               | Action           |
-|:--------------|:----------------|:---------------------|:-----------------|
-| POST          | /sign-up        | create profile       | create           |
-| POST          | /sign-in        | get single profile   | show or retrieve |
-| DELETE        | /sign-out       | delete profile       | destroy          |
-| PATCH         | /change-password| update password      | update           | -->
-
-
+## API Routes
 ### _Profile Routes_
 
 | HTTP Method   | URL Path        | Result               | Action           |
@@ -46,22 +45,30 @@ A simple game of brickbreaker that we all know and love.
 | GET           | /scores         | read list of scores  | index scores     |
 | POST          | /scores         | adds score to list   | adds score       |
 
-<!-- ## Technologies Used
+## Technologies Used
 
 |    Libraries      | Languages        | Frameworks              | Database          | Version Control
 |:-----------------------------------------|:----------------|:---------------------|:-----------------|:-----------------|
 | [React.js](https://reactjs.org/)       |    [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)        |  [Express](https://expressjs.com/) | [MongoDB](https://www.mongodb.com/)   | [GitHub](https://github.com/) |[Javascript](https://www.javascript.com/)          | [BootStrap](https://getbootstrap.com/)       |           |
 |  [Axios](https://www.npmjs.com/package/axios)         | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)          |        |          |
 |    [Mongoose](https://mongoosejs.com/)        |           |        |         |
-|          |          |       |         | -->
+|          |          |       |         |
+### Entity Relationship Diagram
+![ERDbrick.png](ERDbrick.png)
+
+### Wireframe
+![wireframebrick.png](wireframebrick.png)
 
 
   
 ### Opportunities for Future Iterations
-- adding more games to play instead of just one game
+- Fixing paddle physics, specifically left side of paddle when hit ball falls through
+- Fixing ball physics, specifically when hit on left side of paddle, ball dips down past paddle then up to the right hand side of field of view
+- Implementing scores, including saving high scores
+- Implementing users usernames into the actual game
 
 
 ### [Link to Front End Repo](https://github.com/ms00l/brickbreakCLIENT)
 ### Links to Deployed Sites:
-- [Link to the API Deployed]
-- [Link to the Client Deployed]
+- [Link to the API Deployed](https://intense-beyond-99955.herokuapp.com)
+- [Link to the Client Deployed](https://ms00l.github.io/brickbreakCLIENT/)
